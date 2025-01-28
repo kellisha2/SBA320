@@ -4,7 +4,7 @@ function Header() {
   return (
     <div className="header">
         
-        Build Your Own Sub
+       <h1> Build Your Own Sub </h1>
     
     </div>
   )

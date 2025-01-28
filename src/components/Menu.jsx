@@ -1,0 +1,31 @@
+import React from 'react'
+import Ingredients from './Ingredients'
+
+function Menu(props) {
+    console.log(props.breadChoices)
+  return (
+    <div>
+        <h2>Select from every category:</h2>
+
+    <div>
+        <h2>Select a Bread:</h2>
+        <br/>
+        <ul className="breads">
+            {props.breadChoices.map((bread, index) =>(
+                <Ingredients key={index} category="breads" bread={bread} />
+            ))}
+        </ul>
+    </div>
+
+    <div>Select a Meat: </div>
+
+    <div>Select a Cheese: </div>
+
+    <div>Select toppings:</div>
+</div>
+    
+)}
+
+  
+
+export default Menu

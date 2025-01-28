@@ -1,21 +1,13 @@
 import React from 'react'
 
-function ingredients() {
-
-
-
+function ingredients(props) {
   return (
-    <div>Select from every category:
-
-        <div>Select a Bread:</div>
-
-        <div>Select a Meat: </div>
-
-        <div>Select a Cheese: </div>
-
-        <div>Select toppings:</div>
-    </div>
-        
+    <li className="ingredients">
+        <label htmlFor={props.bread}>
+            <input type="radio" name={props.category} id={props.bread} />
+            {props.bread}
+        </label>
+    </li>
   )
 }
 
