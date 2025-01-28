@@ -17,11 +17,19 @@ function Menu(props) {
         </ul>
     </div>
 
-    <div>Select a Meat: </div>
+    <div><h2>Select a Meat: </h2>
+        <br/>
+        <ul className="meats">
+            {props.meatChoices.map((meat, index) =>(
+                <Ingredients key={index} category="meat" meat={meat} />
+            ))}
+        </ul>
+    
+    </div>
 
-    <div>Select a Cheese: </div>
+    <div><h2>Select a Cheese: </h2></div>
 
-    <div>Select toppings:</div>
+    <div><h2>Select toppings:</h2></div>
 </div>
     
 )}
