@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <div className="order">
-        <button>Place Order</button>
+        <button>Order Review</button>
     </div>
   )
 }

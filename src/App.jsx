@@ -71,7 +71,7 @@ function App() {
     },
     {
       id: 16,
-      name:"Prosciutto"
+      name:"Prosciutto",
       price: 3.50
 
     }
@@ -109,7 +109,7 @@ function App() {
     },
     {
       id: 25,
-      name: "Cheddar"
+      name: "Cheddar",
       price: 2.00
 
     }
