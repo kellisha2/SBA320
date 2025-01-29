@@ -1,20 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+body {
+  background-color: #DEB887;
+}
+
+
+.category-selection h2 {
+  color:  #800000;
+}
+
+
+.category-selection h3 {
+  color:  #800000;
+}
+
 ul {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 
 .ingredients {
- 
+  
 }
 
 
-.header {
+.header  {
  display: flex;
- justify-content: center;
- color:  #800000;
+ justify-content: space-between;
+ 
 
+}
+
+.header h1 {
+  color:  #800000;
 }
 
 ul, li label {

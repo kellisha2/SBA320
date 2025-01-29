@@ -20,15 +20,15 @@ function Menu(props) {
 
 
     return (
-        <div>
-            <h2>Select from every category:</h2>
+        <div className='category-selection'>
+            <h2>Select from every category</h2>
 
-            <div>
+            <div className='bread-selection'>
                 <h3>Select a Bread:</h3>
                 <ul className="breads">
                     {props.breadChoices.map((bread, index) => (
                         <Ingredients key={index} category="breads" item={bread}
-                            name={bread.name}
+                            name={bread.name} 
                             price={bread.price}
                             setItem={setItem}
                         />
@@ -36,7 +36,7 @@ function Menu(props) {
                 </ul>
             </div>
 
-            <div>
+            <div className='meat-selection'>
                 <h3>Select a Meat: </h3>
                 <ul className="meats">
                     {props.meatChoices.map((meat, index) => (
@@ -49,7 +49,7 @@ function Menu(props) {
                 </ul>
             </div>
 
-            <div>
+            <div className='cheese-selection'>
                 <h3>Select a Cheese: </h3>
                 <ul className="cheeses">
                     {props.cheeseChoices.map((cheese, index) => (
@@ -62,7 +62,7 @@ function Menu(props) {
                 </ul>
             </div>
 
-            <div>
+            <div className='topping-selection'>
                 <h3>Select toppings:</h3>
                 <ul className="toppings">
                     {props.toppingChoices.map((topping, index) => (
@@ -75,7 +75,7 @@ function Menu(props) {
                 </ul>
             </div>
 
-            <div>
+            <div className='condiment-selection'>
                 <h3>Select condiments:</h3>
                 <ul className="condiments">
                     {props.condimentChoices.map((condiment, index) => (
@@ -88,7 +88,7 @@ function Menu(props) {
                 </ul>
             </div>
 
-            <button onClick={() => submitOrder()}>Order Review</button>
+            <button className='order-btn' onClick={() => submitOrder()}>Order</button>
         </div>
 
     )
