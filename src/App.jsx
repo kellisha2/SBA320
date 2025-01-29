@@ -2,8 +2,12 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Menu from './components/Menu'
 import Footer from './components/Footer'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Cart from './components/Cart';
 
 function App() {
+  const [cart, setCart] = useState([]);
+
   const breads = [
     {
       id: 1,
@@ -13,7 +17,7 @@ function App() {
     },
     {
       id: 2,
-      name:"Wheat",
+      name: "Wheat",
       price: 3.50
 
     },
@@ -34,8 +38,8 @@ function App() {
       name: "Monterey Cheese",
       price: 3.99
 
-    }  
-    
+    }
+
   ]
 
   const meats = [
@@ -71,16 +75,13 @@ function App() {
     },
     {
       id: 16,
-      name:"Prosciutto",
+      name: "Prosciutto",
       price: 3.50
 
     }
-   
-    
-    
-    
-    
-    
+
+
+
   ]
   const cheeses = [
     {
@@ -113,12 +114,12 @@ function App() {
       price: 2.00
 
     }
-   
+
   ]
   const toppings = [
     {
       id: 31,
-      name:  "Lettuce",
+      name: "Lettuce",
       price: .50
 
     },
@@ -164,9 +165,8 @@ function App() {
       price: .25
 
     },
-         
-  ]
 
+  ]
 
   const condiments = [
     {
@@ -195,14 +195,14 @@ function App() {
     },
     {
       id: 45,
-      name:  "Ranch Dressing",
+      name: "Ranch Dressing",
       price: .25
 
     },
     {
       id: 46,
       name: "Salt",
-      price: .25 
+      price: .25
 
     },
     {
@@ -216,19 +216,26 @@ function App() {
       name: "Pepper",
       price: .25
 
-    }      ]
+    }]
   return (
-    <>
-      <Header />
-      <Menu
-        breadChoices={breads}
-        cheeseChoices={cheeses}
-        meatChoices={meats}
-        toppingChoices={toppings}
-        condimentChoices={condiments}
-      />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Header cart={cart} setCart={setCart} />
+      <Routes>
+        <Route path="/" element={
+          <Menu
+            breadChoices={breads}
+            cheeseChoices={cheeses}
+            meatChoices={meats}
+            toppingChoices={toppings}
+            condimentChoices={condiments}
+            cart={cart}
+            setCart={setCart}
+          />
+        } />
+        <Route path="/cart" element={<Cart cart={cart} />} />
+      </Routes>
+      <Footer  />
+    </BrowserRouter>
   )
 }
 

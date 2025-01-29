@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Footer() {
+
+
   return (
     <div className="order">
-        <button>Order Review</button>
+        &copy; 2025, All rights reserved.
     </div>
   )
 }

@@ -17,4 +17,7 @@ ul {
 
 }
 
-
+ul, li label {
+  display: flex;
+  align-items: center;
+}
